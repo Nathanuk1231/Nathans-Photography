@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="Nathan Lloyd — photography, atmosphere, and the details in between.">
+  <title>Nathan Lloyd — Photography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Nathan Lloyd Photography home"><span class="mark">N<span>.</span>L</span><span class="wordmark-copy">NATHAN LLOYD<br><small>PHOTOGRAPHY</small></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#work">Selected work <span>01</span></a>
+      <a href="#about">Behind the lens <span>02</span></a>
+      <a href="#contact">Say hello <span>03</span></a>
+    </nav>
+    <a class="header-cta magnetic" href="#work">Explore the work <span>↘</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-meta mono"><span><i class="status-dot"></i> INDEPENDENT PHOTOGRAPHER</span><span>BASED IN THE UK · AVAILABLE FOR CREATIVE COLLABORATIONS</span></div>
+      <div class="hero-title-wrap">
+        <p class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> Images with a feeling</p>
+        <h1 class="hero-title"><span>LOOK</span><span class="title-second">CLOSER<span class="title-period">.</span></span></h1>
+        <div class="hero-side-note mono">LIGHT / SHADOW<br>STILLNESS / MOVEMENT<br>THE IN-BETWEEN</div>
+      </div>
+      <div class="hero-image-wrap">
+        <img class="hero-image" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=90" alt="Mountain landscape reflected in still water at dusk">
+        <div class="image-vignette"></div>
+        <div class="hero-image-label mono"><span>FIG. 001</span><span>THE WORLD, UNFILTERED</span></div>
+        <div class="hero-image-index">01 <span>/ 04</span></div>
+      </div>
+      <div class="hero-bottom"><p>Finding the extraordinary<br>in the things we almost miss.</p><a href="#work" class="scroll-cue"><span class="scroll-cue-ring">↓</span><span class="mono">SCROLL TO EXPLORE</span></a><p class="hero-bottom-right mono">PERSONAL WORK<br>2024 — 2026</p></div>
+      <div class="hero-orb" aria-hidden="true"></div>
+    </section>
+
+    <section class="intro section-pad">
+      <div class="section-kicker mono"><span>01 / A POINT OF VIEW</span><span class="kicker-line"></span><span>NOT JUST WHAT YOU SEE</span></div>
+      <div class="intro-grid">
+        <h2 class="display-heading">A photograph<br>should make you <em>feel</em><span class="accent-star">✳</span></h2>
+        <div class="intro-copy"><p class="large-copy">I’m interested in the atmosphere of a place, the character of a moment, and the tiny details that make a scene feel like <em>something.</em></p><p class="muted-copy">Photography is a way of paying attention. A study of light, texture, colour, and all the stories that happen just outside the frame.</p><a class="text-link" href="#about">A little more about me <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="work section-pad" id="work">
+      <div class="section-kicker mono"><span>02 / SELECTED WORK</span><span class="kicker-line"></span><span>FRAMES THAT STAY WITH YOU</span></div>
+      <div class="work-heading"><h2 class="display-heading">The <em>collection</em><span class="accent-star">✳</span></h2><p class="muted-copy">A growing collection of observations, experiments, and moments worth keeping.</p></div>
+      <div class="filters" role="group" aria-label="Filter photographs">
+        <button class="filter active" data-filter="all" aria-pressed="true">All frames <span>04</span></button>
+        <button class="filter" data-filter="nature" aria-pressed="false">Nature <span>02</span></button>
+        <button class="filter" data-filter="places" aria-pressed="false">Places <span>01</span></button>
+        <button class="filter" data-filter="details" aria-pressed="false">Details <span>01</span></button>
+      </div>
+      <div class="gallery">
+        <button class="gallery-item gallery-large" data-category="nature" data-index="0" data-title="Quiet horizons" data-description="Nature · Landscape" aria-label="Open Quiet horizons photograph">
+          <span class="gallery-image"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85" alt="Mountain silhouettes reflected in a lake" loading="lazy"></span><span class="gallery-caption"><span><small class="mono">01 — NATURE</small><strong>Quiet horizons</strong></span><span class="gallery-arrow">↗</span></span>
+        </button>
+        <button class="gallery-item gallery-tall" data-category="places" data-index="1" data-title="Between the streets" data-description="Places · Urban" aria-label="Open Between the streets photograph">
+          <span class="gallery-image"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=85" alt="City street illuminated after dark" loading="lazy"></span><span class="gallery-caption"><span><small class="mono">02 — PLACES</small><strong>Between the streets</strong></span><span class="gallery-arrow">↗</span></span>
+        </button>
+        <button class="gallery-item" data-category="details" data-index="2" data-title="Small worlds" data-description="Details · Texture" aria-label="Open Small worlds photograph">
+          <span class="gallery-image"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1200&q=85" alt="Golden early morning light across a field" loading="lazy"></span><span class="gallery-caption"><span><small class="mono">03 — DETAILS</small><strong>Small worlds</strong></span><span class="gallery-arrow">↗</span></span>
+        </button>
+        <button class="gallery-item gallery-wide" data-category="nature" data-index="3" data-title="Last light" data-description="Nature · Light study" aria-label="Open Last light photograph">
+          <span class="gallery-image"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1500&q=85" alt="Sunlight spilling across a dramatic natural landscape" loading="lazy"></span><span class="gallery-caption"><span><small class="mono">04 — NATURE</small><strong>Last light</strong></span><span class="gallery-arrow">↗</span></span>
+        </button>
+      </div>
+      <p class="placeholder-note mono">PREVIEW IMAGES SHOWN — SWAP THESE FOR YOUR OWN PHOTOGRAPHS BEFORE LAUNCH.</p>
+    </section>
+
+    <section class="manifesto" aria-label="Photography philosophy"><div class="manifesto-orbit orbit-one"></div><div class="manifesto-orbit orbit-two"></div><p class="mono manifesto-label">A NOTE TO SELF / 001</p><h2>Slow down.<br>Look again.<br><em>Feel something.</em></h2><span class="manifesto-spark">✳</span><p class="manifesto-foot mono">THE BEST DETAILS NEVER ASK FOR ATTENTION.</p></section>
+
+    <section class="about section-pad" id="about">
+      <div class="section-kicker mono"><span>03 / BEHIND THE LENS</span><span class="kicker-line"></span><span>THE PERSON WITH THE CAMERA</span></div>
+      <div class="about-grid">
+        <div class="about-image-wrap"><img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1200&q=85" alt="Camera resting ready for a photographic walk" loading="lazy"><span class="about-image-stamp mono">ALWAYS OBSERVING<br>NEVER RUSHING</span></div>
+        <div class="about-copy"><p class="eyebrow"><span class="eyebrow-line"></span> Behind the lens</p><h2 class="display-heading">Curiosity<br>is the <em>whole point.</em></h2><p class="large-copy">I’m Nathan — a photographer learning to see familiar things differently.</p><p class="muted-copy">From quiet nature scenes to the character of everyday places, I’m building a body of work around mood, composition, and the feeling a frame can hold. This site is a living collection of what catches my eye.</p><div class="about-facts"><div><span class="mono">01</span><p>Always chasing<br>interesting light</p></div><div><span class="mono">02</span><p>Drawn to mood<br>and atmosphere</p></div><div><span class="mono">03</span><p>Learning with<br>every frame</p></div></div></div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact"><div class="contact-glow"></div><div class="section-kicker mono"><span>04 / YOUR TURN</span><span class="kicker-line"></span><span>LET'S MAKE SOMETHING</span></div><p class="eyebrow"><span class="eyebrow-line"></span> Open to ideas & collaborations</p><h2 class="contact-heading">Have a good<br><em>feeling?</em></h2><p class="contact-copy">Got an idea, a project, or just want to talk photography? Find me on Instagram.</p><a class="contact-link magnetic" href="https://www.instagram.com/nathanlloyd2024/" target="_blank" rel="noreferrer"><span>CONNECT ON INSTAGRAM</span><span class="contact-link-arrow">↗</span></a><p class="mono contact-small">NO FORMS. NO FUSS. JUST A CONVERSATION.</p></section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark footer-mark" href="#top"><span class="mark">N<span>.</span>L</span><span class="wordmark-copy">NATHAN LLOYD<br><small>PHOTOGRAPHY</small></span></a><p class="mono">MADE WITH CURIOSITY <span>✳</span></p><a class="back-top mono" href="#top">BACK TO TOP ↑</a><p class="footer-copy mono">© <span id="year"></span> NATHAN LLOYD</p></footer>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photograph viewer" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close photograph">×</button><button class="lightbox-prev" aria-label="Previous photograph">←</button><figure><img class="lightbox-image" src="" alt=""><figcaption><span class="lightbox-title"></span><span class="lightbox-description mono"></span></figcaption></figure><button class="lightbox-next" aria-label="Next photograph">→</button><p class="lightbox-count mono"></p>
+  </div>
+  <div class="mobile-menu" aria-hidden="true"><a href="#work">Selected work <span>01</span></a><a href="#about">Behind the lens <span>02</span></a><a href="#contact">Say hello <span>03</span></a><p class="mono">NATHAN LLOYD / PHOTOGRAPHY</p></div>
+</body>
+</html>
