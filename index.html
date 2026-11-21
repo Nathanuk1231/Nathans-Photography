@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>NL Visuals — Nathan Lloyd Photography, Warrington</title>
-<meta name="description" content="Walk through the NL Visuals museum: landscape, nature, wildlife, urban and creative photography by Nathan Lloyd, Warrington, England.">
+<title>NL Visuals — The Photography Museum</title>
+<meta name="description" content="Explore the NL Visuals photography museum: a first-person walk-through collection by Nathan Lloyd.">
 <link rel="canonical" href="https://nathanuk1231.github.io/Nathans-Photography/">
 <meta name="theme-color" content="#FFF9EC">
 <meta property="og:type" content="website">
@@ -28,26 +28,29 @@
 <body>
 <header class="nav">
 <span class="logo">NL Visuals</span>
-<button data-go="cafe">Café</button><button data-go="hall">Gallery</button><button data-go="menu">Menu</button>
+<button data-go="cafe">Café</button><button data-go="hall">Gallery</button><button data-go="menu">Collection</button>
 <a class="ig" href="https://www.instagram.com/nathans_photography_2010/" target="_blank" rel="noopener">Instagram ↗</a>
 </header>
 <main id="gallery"></main>
 <div id="veil"></div>
-<div id="hint">WASD to walk · Drag to look · Shift to run</div>
+<div id="crosshair" aria-hidden="true"><i></i></div>
+<div id="action-hint" aria-live="polite"></div>
+<div id="hint">Click the museum to capture your mouse · WASD move · SPACE jump · SHIFT sprint · E interact</div>
 <div class="pill" id="pill"></div>
 <div id="stick" aria-hidden="true"><i></i></div>
+<button id="jump-button" type="button" aria-label="Jump">JUMP</button>
 
 <div id="prompt" role="dialog" aria-modal="true" aria-labelledby="pt">
 <div class="card">
 <p class="k">WELCOME TO NL VISUALS</p>
-<h2 id="pt">Fancy a coffee first?</h2>
-<p>The café menu on the table shows every one of my photographs in one place. Or wander straight into the gallery and see the art on the walls.</p>
-<div class="btns"><button class="btn p" id="goCafe">Take me to the café</button><button class="btn s" id="goWander">Let me wander</button></div>
+<h2 id="pt">Welcome to the museum.</h2>
+<p>Explore a huge collection of photography across a series of architectural galleries. Use your mouse like a first-person game, jump, and keep an eye out for a painting that hides something after hours.</p>
+<div class="btns"><button class="btn p" id="goWander">Enter the museum</button><button class="btn s" id="goCafe">Start in the café</button></div>
 </div>
 </div>
 
-<section id="menu" aria-label="Café menu: all photographs">
-<div class="top"><div><h2>The Menu</h2><p class="sub" id="msub">Every photograph, served fresh.</p></div><button class="x" id="mx">CLOSE ×</button></div>
+<section id="menu" aria-label="The complete photography collection">
+<div class="top"><div><h2>The Collection</h2><p class="sub" id="msub">Every photograph, all in one place.</p></div><button class="x" id="mx">CLOSE ×</button></div>
 <div class="mgrid" id="mgrid"></div>
 </section>
 
