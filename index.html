@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NL Visuals — Nathan Lloyd Photography, Warrington</title>
-<meta name="description" content="Landscape, nature, wildlife, urban and creative photography by Nathan Lloyd, an independent photographer based in Warrington, England.">
+<meta name="description" content="Walk through the NL Visuals museum: landscape, nature, wildlife, urban and creative photography by Nathan Lloyd, Warrington, England.">
 <link rel="canonical" href="https://nathanuk1231.github.io/Nathans-Photography/">
 <meta name="theme-color" content="#FFF9EC">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NL Visuals">
 <meta property="og:title" content="NL Visuals — Nathan Lloyd Photography">
-<meta property="og:description" content="Light, detail, atmosphere. Photography from Warrington, England.">
+<meta property="og:description" content="A walk-through museum of photography from Warrington, England.">
 <meta property="og:url" content="https://nathanuk1231.github.io/Nathans-Photography/">
 <meta property="og:image" content="https://nathanuk1231.github.io/Nathans-Photography/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NL Visuals — Nathan Lloyd Photography">
-<meta name="twitter:description" content="Light, detail, atmosphere. Photography from Warrington, England.">
+<meta name="twitter:description" content="A walk-through museum of photography from Warrington, England.">
 <meta name="twitter:image" content="https://nathanuk1231.github.io/Nathans-Photography/og-image.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -27,33 +27,32 @@
 </head>
 <body>
 <header class="nav">
-<a class="logo" href="#" data-go="gal">NL Visuals</a>
-<nav class="links" aria-label="Main"><a data-go="gal">Index</a><a data-go="list">Portfolio</a></nav>
+<span class="logo">NL Visuals</span>
+<button data-go="cafe">Café</button><button data-go="hall">Gallery</button><button data-go="menu">Menu</button>
 <a class="ig" href="https://www.instagram.com/nathans_photography_2010/" target="_blank" rel="noopener">Instagram ↗</a>
 </header>
+<main id="gallery"></main>
+<div id="veil"></div>
+<div id="hint">WASD to walk · Drag to look · Shift to run</div>
+<div class="pill" id="pill"></div>
+<div id="stick" aria-hidden="true"><i></i></div>
 
-<main id="gallery"><div id="veil"></div></main>
-
-<div class="gui" id="gui">
-<div class="arrows">
-<button id="prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12H4m6-6-6 6 6 6"/></svg></button>
-<button id="next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
-</div>
-<div class="hint"><span class="m"><span id="h1">Scroll or drag to walk round</span></span><span class="m"><span id="h2">Click a photo to look closer</span></span></div>
-<div class="toggle"><button class="on" data-go="gal">GALLERY</button><button data-go="list">LIST</button></div>
-<div class="cap">
-<span class="m kick"><span>YOU ARE WALKING PAST</span></span>
-<span class="m"><span><h1>Selected Work</h1></span></span>
-<a class="enter m" data-go="list"><span>ENTER THE COLLECTION →</span></a>
+<div id="prompt" role="dialog" aria-modal="true" aria-labelledby="pt">
+<div class="card">
+<p class="k">WELCOME TO NL VISUALS</p>
+<h2 id="pt">Fancy a coffee first?</h2>
+<p>The café menu on the table shows every one of my photographs in one place. Or wander straight into the gallery and see the art on the walls.</p>
+<div class="btns"><button class="btn p" id="goCafe">Take me to the café</button><button class="btn s" id="goWander">Let me wander</button></div>
 </div>
 </div>
 
-<div class="pill" id="pill">OPEN THE PHOTO</div>
-
-<section id="list" aria-label="All photographs"><h2>SELECTED WORK — ALL PHOTOS</h2><div class="grid" id="grid"></div></section>
+<section id="menu" aria-label="Café menu: all photographs">
+<div class="top"><div><h2>The Menu</h2><p class="sub" id="msub">Every photograph, served fresh.</p></div><button class="x" id="mx">CLOSE ×</button></div>
+<div class="mgrid" id="mgrid"></div>
+</section>
 
 <div id="view" role="dialog" aria-modal="true" aria-label="Photograph viewer">
-<button class="x" aria-label="Close">×</button><img alt=""><p></p>
+<button class="x" aria-label="Close">CLOSE ×</button><img alt=""><p></p>
 </div>
 </body>
 </html>
