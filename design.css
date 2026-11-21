@@ -49,3 +49,71 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset
 @media (pointer:coarse){#stick{display:block}#hint{bottom:170px}}
 @media (max-width:700px){.nav{gap:16px}.nav .ig{display:none}.card{padding:26px 22px}.card h2{font-size:36px}#hint{white-space:normal;width:86%}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* First-person museum controls and in-world interaction */
+html,body,button,a,main,section,div,span,p,h1,h2,h3,img {
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-tap-highlight-color:transparent;
+}
+#gallery { cursor:crosshair; }
+#gallery canvas { outline:0; }
+body.mouse-locked #gallery { cursor:none; }
+#crosshair {
+  position:fixed;
+  left:50%;top:50%;
+  width:18px;height:18px;
+  margin:-9px 0 0 -9px;
+  z-index:21;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .12s;
+}
+body.mouse-locked #crosshair { opacity:1; }
+#crosshair::before,#crosshair::after {
+  content:"";position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  background:rgba(255,250,238,.92);
+  box-shadow:0 0 3px rgba(0,0,0,.85);
+}
+#crosshair::before { width:14px;height:2px; }
+#crosshair::after { width:2px;height:14px; }
+#crosshair i {
+  position:absolute;left:50%;top:50%;width:3px;height:3px;
+  border-radius:50%;background:#312b30;transform:translate(-50%,-50%);
+}
+#action-hint {
+  position:fixed;left:50%;bottom:69px;transform:translateX(-50%);
+  z-index:22;padding:9px 15px;border:1px solid rgba(230,213,185,.5);
+  background:rgba(25,24,31,.86);color:#fff7e8;border-radius:3px;
+  font:400 10px/1.3 var(--mono);letter-spacing:.12em;text-align:center;
+  opacity:0;visibility:hidden;transition:opacity .14s,visibility .14s;
+  pointer-events:none;white-space:nowrap;
+}
+#action-hint.on { opacity:1;visibility:visible; }
+#hint {
+  background:rgba(24,23,30,.78);color:#fff6e8;
+  border:1px solid rgba(255,255,255,.15);
+  letter-spacing:.08em;
+}
+#pill { background:#211d29; }
+#prompt .card { border:1px solid rgba(124,99,69,.3); }
+#prompt .card h2 { letter-spacing:.015em; }
+#menu .mi .im { background-size:contain;background-repeat:no-repeat; }
+#view img { user-select:none;-webkit-user-drag:none; }
+@media (pointer:coarse) {
+  #crosshair { display:none; }
+  #action-hint { bottom:165px;max-width:84%;white-space:normal; }
+  #hint { bottom:170px; }
+}
+@media (max-width:700px) {
+  #action-hint { font-size:9px; }
+}
+
+#jump-button {
+  display:none;position:fixed;right:24px;bottom:42px;z-index:23;
+  width:82px;height:82px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7);
+  background:rgba(31,29,38,.7);color:#fff8ed;text-align:center;
+  font:500 11px/82px var(--mono);letter-spacing:.12em;touch-action:none;
+}
+@media (pointer:coarse) { #jump-button { display:block; } }
